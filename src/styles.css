@@ -6,3 +6,7 @@
   background-repeat: repeat-x;
   background-size: cover;
 }
+
+.font-quicksand {
+  font-family: 'Quicksand', sans-serif;
+}
