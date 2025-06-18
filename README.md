@@ -42,4 +42,4 @@ This project is open source under the MIT license.
 
 ---
 
-> **Note:** If you have questions, suggestions, or want to contribute, feel free to
+> **Note:** If you have questions, suggestions, or want to contribute, feel free to contact me
