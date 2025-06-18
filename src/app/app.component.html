@@ -5,4 +5,37 @@
     <div id="layer-3" class="absolute left-0 w-full h-full bg-bottom bottom- bg-config-layer bg-layer-3" [ngClass]="{ 'bg-layer-3-sunset': weatherType === 'sunset', 'bg-layer-3-cloudy': weatherType === 'cloudy', 'bg-layer-3-rainy': weatherType === 'rainy', 'bg-layer-3-shiny': weatherType === 'shiny' }"></div>
     <div id="layer-4" class="absolute bottom-0 left-0 w-full h-full bg-bottom bg-config-layer bg-layer-4" [ngClass]="{ 'bg-layer-4-sunset': weatherType === 'sunset', 'bg-layer-4-cloudy': weatherType === 'cloudy', 'bg-layer-4-rainy': weatherType === 'rainy', 'bg-layer-4-shiny': weatherType === 'shiny' }"></div>
 
+    <div id="weather" class="absolute bottom-0 z-10 flex flex-row items-center justify-center w-10/12 gap-5 p-4 transform -translate-x-1/2 -translate-y-1/2 shadow-lg left-1/2 lg:left-4 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-0 lg:w-fit h-fit bg-black/25 backdrop-blur-lg rounded-2xl lg:flex-col">
+        <div class="absolute z-0 transition-all duration-300 rounded-lg shadow-lg bg-white/25" [ngStyle]="{ top: highlightTop + 'px', left: highlightLeft + 'px', width: highlightWidth + 'px', height: highlightHeight + 'px' }" ></div>
+
+        <div 
+        class="relative z-10 p-3 transition-all duration-200 rounded-lg hover:scale-110 hover:cursor-pointer"
+        (click)="setWeatherType('sunset')"
+        #sunsetIcon
+        >
+            <img src="../assets/icons/sunset.svg" alt="sunset icon" class="w-[5vh] h-[5vh]" />
+        </div>
+        <div 
+        class="relative z-10 p-3 transition-all duration-200 rounded-lg hover:scale-110 hover:cursor-pointer"
+        (click)="setWeatherType('cloudy')"
+        #cloudyIcon
+        >
+            <img src="../assets/icons/cloudy.svg" alt="cloudy icon" class="w-[5vh] h-[5vh]" />
+        </div>
+        <div 
+        class="relative z-10 p-3 transition-all duration-200 rounded-lg hover:scale-110 hover:cursor-pointer"
+        (click)="setWeatherType('rainy')"
+        #rainyIcon
+        >
+            <img src="../assets/icons/rainy.svg" alt="rainy icon" class="w-[5vh] h-[5vh]" />
+        </div>
+        <div 
+        class="relative z-10 p-3 transition-all duration-200 rounded-lg hover:scale-110 hover:cursor-pointer"
+        (click)="setWeatherType('shiny')"
+        #shinyIcon
+        >
+            <img src="../assets/icons/shiny.svg" alt="shiny icon" class="w-[5vh] h-[5vh]" />
+        </div>
+    </div>
+    
 </div>
