@@ -1,27 +1,45 @@
-# RelaxTime
+# Time to Relax
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+**Time to Relax** is a simple and minimalist web page that displays your local time and, if you grant location permissions, also shows your city, country, and the current temperature in Celsius degrees.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Displays the local time in real time.
+- If the user grants location permissions, shows the city, country, and current temperature using a weather API.
+- **Four weather backgrounds available:** You can switch between four different weather environments (sunset, cloudy, rainy, and shiny).  
+- The page background uses **parallax effects** for moving clouds in all four weather types, creating a dynamic and relaxing visual experience.
+- **Privacy:** Location information is **never stored or processed** at any time. It is only used temporarily to query the weather API and display the result on screen.
+- Personal project, open source, and not for commercial use.
 
-## Code scaffolding
+## Installation and Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone this repository:
+   ```
+   git clone https://github.com/paralelogramo/relaxTime.git
+   ```
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   ng serve
+   ```
+4. Open your browser at [http://localhost:4200/](http://localhost:4200/)
 
-## Build
+## Why this project?
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This project was created as a personal tool and for learning purposes. It is not sold or commercialized. It is open source so anyone can set up their own similar system, modify it, or contribute.
 
-## Running unit tests
+## Contact
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- GitHub: [paralelogramo](https://github.com/paralelogramo)
+- Discord: **vrojasa**
 
-## Running end-to-end tests
+## License
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+This project is open source under the MIT license.
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+> **Note:** If you have questions, suggestions, or want to contribute, feel free to
