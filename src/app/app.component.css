@@ -48,3 +48,38 @@
     background-position-x: -1152px;
   }
 }
+
+.volume-slider {
+  height: 16px;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.volume-slider::-webkit-slider-runnable-track {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  transition: width 0.2s, height 0.2s;
+  cursor: pointer;
+  margin-top: -4px;
+}
+
+.volume-slider:focus {
+  outline: none;
+}
+.volume-slider::-ms-tooltip {
+  display: none;
+}

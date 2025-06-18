@@ -38,4 +38,39 @@
         </div>
     </div>
     
+    <div id="clock" class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-10/12 lg:w-1/2 h-1/3 lg:h-1/2 z-[4] bg-black/20 backdrop-blur-lg rounded-2xl shadow-lg flex flex-col items-center justify-center gap-0">
+        <h1 class="text-[15vw] lg:text-[15vh] font-bold text-white font-quicksand drop-shadow-lg">
+            {{ currentTimeString }}
+        </h1>
+        <h3 class="text-[7.5vw] lg:text-[5vh] font-semibold tracking-wide select-none text-gray-50 font-quicksand drop-shadow-md">
+            {{ cityAndCountry }}
+        </h3>
+        <h3 class="text-[7.5vw] lg:text-[5vh] font-semibold tracking-wide select-none text-gray-50 font-quicksand drop-shadow-md">
+            {{ currentTemperature }} °C
+        </h3>
+    </div>
+
+    <div id="radio" class="max-lg:hidden absolute right-4 top-[50%] transform -translate-y-1/2 w-1/6 h-1/3 bg-black/25 backdrop-blur-lg rounded-2xl shadow-lg flex flex-col items-center justify-between z-10 overflow-hidden">
+        <div class="w-full h-1/2">
+            <div class="flex items-center justify-center h-full overflow-hidden">
+                <img src="../assets/images/song_cover.jpg" alt="radio icon" class="object-cover w-full h-full opacity-75">
+            </div>
+        </div>
+        <div class="w-full h-[50%] flex flex-col items-center justify-around">
+            <div class="flex flex-row items-center w-full gap-3 px-3">
+                <button (click)="toggleRadioPlayback()" class="relative w-1/5 h-auto rounded-full shadow aspect-square bg-white/20 hover:bg-white/40">
+                    <img *ngIf="!isRadioPlaying" src="../assets/icons/play.svg" alt="play icon" class="w-[2.5vh] h-auto aspect-square absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">
+                    <img *ngIf="isRadioPlaying" src="../assets/icons/pause.svg" alt="pause icon" class="w-[2.5vh] h-auto aspect-square absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">
+                </button>
+                <div class="flex flex-col w-4/5">
+                    <span class="text-[2.5vh] font-quicksand font-semibold text-white drop-shadow capitalize line-clamp-1">{{ currentSong.title || 'Cargando...' }}</span>
+                    <span class="text-[2vh] text-gray-200 capitalize font-quicksand line-clamp-1">{{ currentSong.artist || 'Cargando...' }}</span>
+                </div>
+            </div>
+            <div class="flex flex-row items-center justify-center w-full gap-3 px-3">
+                <img [src]="radioVolumeIcon" alt="volume" class="w-6 h-6">
+                <input type="range" min="0" max="1" step="0.01" [value]="radioVolume" (input)="updateRadioVolume($event)" class="w-full volume-slider">
+            </div>
+        </div>
+    </div>
 </div>
