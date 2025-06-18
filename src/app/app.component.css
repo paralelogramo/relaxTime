@@ -1,0 +1,50 @@
+.bg-config-layer {
+  background-repeat: repeat-x;
+  background-size: 576px 324px;
+}
+
+.sunset-bg { background: linear-gradient( to top, #ffb347 0%, #ff5e62 50%, #2b5876 100%); }
+.cloudy-bg { background-color: #87BCC6; }
+.rainy-bg { background-color: #D9D6CD; }
+.shiny-bg { background-image: linear-gradient(to top, #6d84ec, #77befa); }
+
+.bg-layer-2-sunset { background-image: url('../assets/parallax/sunset/2.png'); }
+.bg-layer-3-sunset { background-image: url('../assets/parallax/sunset/3.png'); }
+.bg-layer-4-sunset { background-image: url('../assets/parallax/sunset/4.png'); }
+
+.bg-layer-2-cloudy { background-image: url('../assets/parallax/cloudy/2.png'); }
+.bg-layer-3-cloudy { background-image: url('../assets/parallax/cloudy/3.png'); }
+.bg-layer-4-cloudy { background-image: url('../assets/parallax/cloudy/4.png'); }
+
+.bg-layer-2-rainy { background-image: url('../assets/parallax/rainy/2.png'); }
+.bg-layer-3-rainy { background-image: url('../assets/parallax/rainy/3.png'); }
+.bg-layer-4-rainy { background-image: url('../assets/parallax/rainy/4.png'); }
+
+.bg-layer-2-shiny { background-image: url('../assets/parallax/shiny/2.png'); }
+.bg-layer-3-shiny { background-image: url('../assets/parallax/shiny/3.png'); }
+.bg-layer-4-shiny { background-image: url('../assets/parallax/shiny/4.png'); }
+
+
+.bg-layer-2 {
+  z-index: 2;
+  animation: scrollBackground 108s linear infinite;
+}
+
+.bg-layer-3 {
+  z-index: 3;
+  animation: scrollBackground 72s linear infinite;
+}
+
+.bg-layer-4 {
+  z-index: 5;
+  animation: scrollBackground 36s linear infinite;
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1152px;
+  }
+}
